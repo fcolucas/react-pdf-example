@@ -1,5 +1,6 @@
 import {
   Document,
+  Font,
   Page,
   Path,
   StyleSheet,
@@ -8,19 +9,18 @@ import {
   View,
 } from "@react-pdf/renderer";
 
-// Font.register({
-//   family: "Lato",
-//   fonts: [
-//     {
-//       src: "https://fonts.googleapis.com/css2?family=Lato&display=swap",
-//       fontWeight: 400,
-//     },
-//     {
-//       src: "https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap",
-//       fontWeight: 700,
-//     },
-//   ],
-// });
+Font.register({
+  family: "Lato",
+  fonts: [
+    {
+      src: "http://fonts.gstatic.com/s/lato/v24/S6uyw4BMUTPHvxk6XweuBCY.ttf",
+    },
+    {
+      src: "http://fonts.gstatic.com/s/lato/v24/S6u9w4BMUTPHh6UVew-FGC_p9dw.ttf",
+      fontWeight: 700,
+    },
+  ],
+});
 
 const styles = StyleSheet.create({
   header: {
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 12,
     color: "#171D21",
-    // fontFamily: "Lato",
+    fontFamily: "Lato",
   },
   textSemibold: {
     fontWeight: 500,
@@ -312,9 +312,7 @@ const MyDocument = () => {
 
         <Gap size={24} />
 
-        <Text
-          style={[styles.text, styles.textSemibold, { textAlign: "center" }]}
-        >
+        <Text style={[styles.text, styles.textBold, { textAlign: "center" }]}>
           PESSOAL NOTIFICADO (via email)
         </Text>
 
