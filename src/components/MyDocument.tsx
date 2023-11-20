@@ -8,6 +8,8 @@ import {
   Text,
   View,
 } from "@react-pdf/renderer";
+import { format } from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 Font.register({
   family: "Lato",
@@ -372,6 +374,15 @@ const MyDocument = () => {
         <Gap size={24} />
 
         <DocumentFooter />
+
+        <View style={{ paddingVertical: 8, paddingHorizontal: 16 }}>
+          <Text style={styles.text}>
+            Data de emissão:{" "}
+            {format(new Date(), "dd 'de' MMMM 'de' yyyy", {
+              locale: ptBR,
+            })}
+          </Text>
+        </View>
       </Page>
     </Document>
   );
