@@ -76,6 +76,25 @@ const styles = StyleSheet.create({
     padding: 10,
     flexGrow: 1,
   },
+  tableContainer: {
+    gap: 10,
+  },
+  tableBody: {
+    gap: 10,
+  },
+  tableHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 30,
+    paddingBottom: 8,
+    borderBottom: 1,
+    borderColor: "#9E9E9E",
+  },
+  tableItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 30,
+  },
 });
 
 const EngieLogo = () => (
@@ -267,56 +286,88 @@ const MyDocument = () => {
 
         <View style={styles.box} wrap={false}>
           <View style={{ flexDirection: "row" }}>
-            <View style={{ flexGrow: 1 }}>
-              <Text style={styles.text}>
-                <Text style={[styles.text, styles.textBold, { flexGrow: 1 }]}>
-                  SOLICITADO POR:{" "}
-                </Text>
-                Tonia Dias de Souza
+            <Text style={[styles.text, { flexGrow: 1 }]}>
+              <Text style={[styles.text, styles.textBold]}>
+                SOLICITADO POR:{" "}
               </Text>
-            </View>
-            <View>
-              <Text style={styles.text}>
-                <Text style={[styles.text, styles.textBold]}>DATA: </Text>
-                26/01/2022 - 12:19
-              </Text>
-            </View>
+              Tonia Dias de Souza
+            </Text>
+
+            <Text style={styles.text}>
+              <Text style={[styles.text, styles.textBold]}>DATA: </Text>
+              26/01/2022 - 12:19
+            </Text>
           </View>
           <View style={{ flexDirection: "row" }}>
-            <View style={{ flexGrow: 1 }}>
-              <Text style={styles.text}>
-                <Text style={[styles.text, styles.textBold, { flexGrow: 1 }]}>
-                  DE ACORDO:{" "}
-                </Text>
-                PauloSupero
-              </Text>
-            </View>
-            <View>
-              <Text style={styles.text}>
-                <Text style={[styles.text, styles.textBold]}>DATA: </Text>
-                18/05/2022 - 14:33
-              </Text>
-            </View>
+            <Text style={[styles.text, { flexGrow: 1 }]}>
+              <Text style={[styles.text, styles.textBold]}>DE ACORDO: </Text>
+              PauloSupero
+            </Text>
+
+            <Text style={styles.text}>
+              <Text style={[styles.text, styles.textBold]}>DATA: </Text>
+              18/05/2022 - 14:33
+            </Text>
           </View>
           <View style={{ flexDirection: "row" }}>
-            <View style={{ flexGrow: 1 }}>
-              <Text style={styles.text}>
-                <Text style={[styles.text, styles.textBold, { flexGrow: 1 }]}>
-                  JUSTIFICATIVA:{" "}
-                </Text>
-                Teste OCP4 Teste OCP4 Teste OCP4
+            <Text style={[styles.text, { flexGrow: 1 }]}>
+              <Text style={[styles.text, styles.textBold]}>
+                JUSTIFICATIVA:{" "}
               </Text>
-            </View>
+              Teste OCP4 Teste OCP4 Teste OCP4
+            </Text>
           </View>
         </View>
 
         <Gap size={24} />
 
-        <Text style={[styles.text, styles.textBold, { textAlign: "center" }]}>
-          PESSOAL NOTIFICADO (via email)
-        </Text>
-
-        <Gap size={16} />
+        <View wrap={false}>
+          <Text style={[styles.text, styles.textBold, { textAlign: "center" }]}>
+            PESSOAL NOTIFICADO (via email)
+          </Text>
+          <Gap size={16} />
+          <View style={styles.tableContainer}>
+            <View style={styles.tableHeader}>
+              <Text style={[styles.text, styles.textBold, { flexGrow: 1 }]}>
+                NOME
+              </Text>
+              <Text style={[styles.text, styles.textBold, { width: "11.5%" }]}>
+                DATA
+              </Text>
+              <Text style={[styles.text, styles.textBold]}>HORA</Text>
+            </View>
+            <View style={styles.tableBody}>
+              <View style={styles.tableItem}>
+                <Text style={[styles.text, styles.textBold, { flexGrow: 1 }]}>
+                  cos@celesc.com.br
+                </Text>
+                <Text style={styles.text}>26/01/2022</Text>
+                <Text style={styles.text}>12:19</Text>
+              </View>
+              <View style={styles.tableItem}>
+                <Text style={[styles.text, styles.textBold, { flexGrow: 1 }]}>
+                  marcos.thibes@engie.com
+                </Text>
+                <Text style={styles.text}>26/01/2022</Text>
+                <Text style={styles.text}>12:19</Text>
+              </View>
+              <View style={styles.tableItem}>
+                <Text style={[styles.text, styles.textBold, { flexGrow: 1 }]}>
+                  otaviow@celesc.com.br
+                </Text>
+                <Text style={styles.text}>26/01/2022</Text>
+                <Text style={styles.text}>12:19</Text>
+              </View>
+              <View style={styles.tableItem}>
+                <Text style={[styles.text, styles.textBold, { flexGrow: 1 }]}>
+                  programacaocos@celesc.com.br
+                </Text>
+                <Text style={styles.text}>26/01/2022</Text>
+                <Text style={styles.text}>12:19</Text>
+              </View>
+            </View>
+          </View>
+        </View>
 
         <Gap size={24} />
 
