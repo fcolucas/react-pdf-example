@@ -285,7 +285,7 @@ const MyDocument = () => {
         <Gap size={8} />
 
         <View style={styles.box} wrap={false}>
-          <View style={{ flexDirection: "row" }}>
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
             <Text style={[styles.text, { flexGrow: 1 }]}>
               <Text style={[styles.text, styles.textBold]}>
                 SOLICITADO POR:{" "}
@@ -298,7 +298,7 @@ const MyDocument = () => {
               26/01/2022 - 12:19
             </Text>
           </View>
-          <View style={{ flexDirection: "row" }}>
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
             <Text style={[styles.text, { flexGrow: 1 }]}>
               <Text style={[styles.text, styles.textBold]}>DE ACORDO: </Text>
               PauloSupero
@@ -338,28 +338,28 @@ const MyDocument = () => {
             </View>
             <View style={styles.tableBody}>
               <View style={styles.tableItem}>
-                <Text style={[styles.text, styles.textBold, { flexGrow: 1 }]}>
+                <Text style={[styles.text, styles.textBold, { width: "70%" }]}>
                   cos@celesc.com.br
                 </Text>
                 <Text style={styles.text}>26/01/2022</Text>
                 <Text style={styles.text}>12:19</Text>
               </View>
               <View style={styles.tableItem}>
-                <Text style={[styles.text, styles.textBold, { flexGrow: 1 }]}>
+                <Text style={[styles.text, styles.textBold, { width: "70%" }]}>
                   marcos.thibes@engie.com
                 </Text>
                 <Text style={styles.text}>26/01/2022</Text>
                 <Text style={styles.text}>12:19</Text>
               </View>
               <View style={styles.tableItem}>
-                <Text style={[styles.text, styles.textBold, { flexGrow: 1 }]}>
+                <Text style={[styles.text, styles.textBold, { width: "70%" }]}>
                   otaviow@celesc.com.br
                 </Text>
                 <Text style={styles.text}>26/01/2022</Text>
                 <Text style={styles.text}>12:19</Text>
               </View>
               <View style={styles.tableItem}>
-                <Text style={[styles.text, styles.textBold, { flexGrow: 1 }]}>
+                <Text style={[styles.text, styles.textBold, { width: "70%" }]}>
                   programacaocos@celesc.com.br
                 </Text>
                 <Text style={styles.text}>26/01/2022</Text>
